@@ -16,9 +16,7 @@ namespace TestProject1.Feature
         [Given(@"QA enviroment login")]
         public void GivenQAEnviromentLogin()
         {
-            Driver = new ChromeDriver();
-            Driver.Navigate().GoToUrl("https://lhqa.pevaar.com:446/");
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+            Assert.That(loginPage.containerLoginExist(), Is.True, "Container did not displayed");
         }
         
         [When(@"Fill the fields")]

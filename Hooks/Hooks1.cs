@@ -24,6 +24,9 @@ namespace TestProject1.Hooks
             //new DriverManager().SetUpDriver(new ChromeConfig());
             //Driver = new ChromeDriver(option);
             //TODO: implement logic that has to run before executing each scenario//TODO: implement logic that has to run before executing each scenario
+            Driver = new ChromeDriver();
+            Driver.Navigate().GoToUrl("https://lhqa.pevaar.com:446/");
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
 
         [AfterScenario]
