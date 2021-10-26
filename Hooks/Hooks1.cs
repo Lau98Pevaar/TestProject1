@@ -17,6 +17,9 @@ namespace TestProject1.Hooks
         {
             ChromeOptions option = new ChromeOptions();
             option.AddArguments("start-maximized");
+            option.AddArguments("--disable-notifications");
+            option.AddArgument("no-sandbox");
+            option.AddArgument("--disable-setuid-sandbox");
             //option.AddArguments("--disable-gpu");
             //option.AddArguments("--headless");
 
@@ -24,9 +27,9 @@ namespace TestProject1.Hooks
             //new DriverManager().SetUpDriver(new ChromeConfig());
             //Driver = new ChromeDriver(option);
             //TODO: implement logic that has to run before executing each scenario//TODO: implement logic that has to run before executing each scenario
-            Driver = new ChromeDriver();
+            Driver = new ChromeDriver(option);
             Driver.Navigate().GoToUrl("https://lhqa.pevaar.com:446/");
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
         }
 
         [AfterScenario]

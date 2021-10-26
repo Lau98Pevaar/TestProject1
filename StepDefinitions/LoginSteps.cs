@@ -1,22 +1,26 @@
 ﻿using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
 using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using TestProject1.Pages;
 
-namespace TestProject1.Feature
+namespace TestProject1.StepDefinitions
 {
     [Binding]
-    public class LoginSteps : DriverHelper
+    public class LoginSteps
     {
-        
         LoginPage loginPage = new LoginPage();
-
         [Given(@"QA enviroment login")]
         public void GivenQAEnviromentLogin()
         {
-            Assert.That(loginPage.containerLoginExist(), Is.True, "Container did not displayed");
+            Assert.That(loginPage.ElementExist(loginPage.containerLogin), Is.True, "Login container did not displayed");
+        }
+        
+        [Given(@"Find the text box to enter the Email, Password")]
+        public void GivenFindTheTextBoxToEnterTheEmailPassword()
+        {
+            Assert.That(loginPage.ElementExist(loginPage.txtUserName), Is.True, "Email fields did not displayed");
+            Assert.That(loginPage.ElementExist(loginPage.txtPassword), Is.True, "Password fields did not displayed");
         }
         
         [When(@"Fill the fields")]
@@ -29,25 +33,19 @@ namespace TestProject1.Feature
         [When(@"Move the remember me switch")]
         public void WhenMoveTheRememberMeSwitch()
         {
-            loginPage.SwitchRememberMe();
+            loginPage.swRememberMe.Click();
         }
         
         [When(@"Select Next button login")]
         public void WhenSelectNextButtonLogin()
         {
-            loginPage.ClickLogin();
-        }
-        
-        [Then(@"Find the text box to enter the Email, Password")]
-        public void ThenFindTheTextBoxToEnterTheEmailPassword()
-        {
-            Assert.That(loginPage.txtUserNameAndPasswordExist(), Is.True, "Email and Password fields did not displayed");
+            loginPage.btnLogin.Click(); 
         }
         
         [Then(@"Shows the Dashboard LH")]
         public void ThenShowsTheDashboardLH()
         {
-            Assert.That(loginPage.dashboardLHExist(), Is.True, "Dashboard did not displayed");
+            Assert.That(loginPage.ElementExist(loginPage.dashboardLH), Is.True, "Dashboard did not displayed");
         }
     }
 }
