@@ -16,15 +16,16 @@ namespace TestProject1.Hooks
         public void BeforeScenario()
         {
             ChromeOptions option = new ChromeOptions();
+
+            option.AddArgument("no-sandbox");
             option.AddArguments("start-maximized");
+            option.AddArguments("--incognito");
             //option.AddArguments("--disable-gpu");
             //option.AddArguments("--headless");
 
             Console.WriteLine("setup");
-            //new DriverManager().SetUpDriver(new ChromeConfig());
-            //Driver = new ChromeDriver(option);
-            //TODO: implement logic that has to run before executing each scenario//TODO: implement logic that has to run before executing each scenario
-            Driver = new ChromeDriver();
+           
+            Driver = new ChromeDriver(option);
             Driver.Navigate().GoToUrl("https://lhqa.pevaar.com:446/");
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }

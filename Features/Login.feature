@@ -10,6 +10,6 @@ Scenario: Login in QA
 	| Email             | Password      |
     | admin@admin.com   |   Abc123*     |
 	And Move the remember me switch
-	When Select Next button login
+	And Select Next button login
 	Then Shows the Dashboard LH
 	

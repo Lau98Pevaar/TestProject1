@@ -121,7 +121,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
- testRunner.When("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 14
  testRunner.Then("Shows the Dashboard LH", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
