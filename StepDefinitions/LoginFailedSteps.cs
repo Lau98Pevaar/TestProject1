@@ -89,12 +89,14 @@ namespace TestProject1.StepDefinitions
         public void WhenThenClickOnResetPassword()
         {
             loginFailedPage.ClickResetPassword.Click();
+            //loginFailedPage.ClickQAButton.Click();
         }
     
         [Then(@"Show again QA enviroment")]
         public void ThenShowAgainQAEnviroment()
         {
-            loginFailedPage.ClickQAButton.Click();
+            Assert.That(loginFailedPage.ElementExist(loginFailedPage.containerLogin), Is.True, "Page Reset Password did not displayed");
+            
         }
     }
 }
