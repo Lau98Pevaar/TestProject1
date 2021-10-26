@@ -8,10 +8,10 @@ Scenario: Login in QA
 	And  Find the text box to enter the Email, Password
 	When Fill the fields
 	| Email             | Password      |
-  | admin@admin.com   |   Abc123*     |
+    | admin@admin.com   |   Abc123*     |
 
 	And  Move the remember me switch
 	And  Select Next button login
-  Then Shows the Dashboard LH
+    Then Shows the Dashboard LH
 
 	
