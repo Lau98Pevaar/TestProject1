@@ -8,7 +8,7 @@ Scenario: Login in QA
 	And  Find the text box to enter the Email, Password
 	When Fill the fields
 	| Email             | Password      |
-    | admin@admin.com   |   Abc123*     |
+    | adminx@admin.com   |   Abc123*     |
 
 	And  Move the remember me switch
 	And  Select Next button login

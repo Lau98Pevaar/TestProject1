@@ -84,14 +84,29 @@ namespace TestProject1.StepDefinitions
         {
             loginFailedPage.NextButton.Click();
         }
-        
-        [When(@"Then Click on Reset Password")]
-        public void WhenThenClickOnResetPassword()
+        [When(@"Fill the New Password")]
+        public void WhenFillTheNewPassword()
+        {
+            String Password = "Password10#";
+            Assert.That(loginFailedPage.ElementExist(loginFailedPage.txtNewPassword), Is.True, "Box Text Password did not displayed");
+            loginFailedPage.txtNewPassword.SendKeys(Password);
+
+            Assert.That(loginFailedPage.ElementExist(loginFailedPage.txtConfirmPassword), Is.True, "Box Confirm Text Password did not displayed");
+            loginFailedPage.txtConfirmPassword.SendKeys(Password);
+        }
+        [When(@"Click on Reset Password")]
+        public void WhenClickOnResetPassword()
         {
             loginFailedPage.ClickResetPassword.Click();
-            //loginFailedPage.ClickQAButton.Click();
+            
         }
-    
+        [When(@"Click on Login Button")]
+        public void WhenClickOnLoginButton()
+        {
+            loginFailedPage.ClickQAButton.Click();
+
+        }
+
         [Then(@"Show again QA enviroment")]
         public void ThenShowAgainQAEnviroment()
         {

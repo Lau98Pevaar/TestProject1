@@ -112,7 +112,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Email",
                             "Password"});
                 table1.AddRow(new string[] {
-                            "admin@admin.com",
+                            "adminx@admin.com",
                             "Abc123*"});
 #line 9
  testRunner.When("Fill the fields", ((string)(null)), table1, "When ");
