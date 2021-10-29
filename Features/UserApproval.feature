@@ -1,9 +1,17 @@
 ﻿Feature: UserApproval
-	Simple calculator for adding two numbers
+	User Approval by admin
 
 @mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: User Approval
+	Given QA enviroment login
+	And  Find the text box to enter the Email, Password
+	When Fill the fields
+	|         Email            |       Password       |
+    | laura.moreno@pevaar.com  |   Stephany091098     |
+	And  Move the remember me switch
+	And  Select Next button login
+	And Click on My Profile Menu
+	And Switch to admin
+	And Select Admin Component 
+	And Select User Approvals
+	And Search the user recently registered
