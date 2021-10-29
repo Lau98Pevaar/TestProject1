@@ -16,5 +16,7 @@ Scenario: Login failed QA
 	And Go to Email Link 
 	And Fill the security question
 	And Click on Next Button
-	And Then Click on Reset Password
+	And Fill the New Password
+	And Click on Reset Password
+	And Click on Login Button
 	Then Show again QA enviroment 

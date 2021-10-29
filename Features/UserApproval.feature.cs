@@ -35,7 +35,9 @@ namespace TestProject1.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
+
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "UserApproval", "\tUser Approval by admin", ProgrammingLanguage.CSharp, ((string[])(null)));
+
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,14 +76,18 @@ namespace TestProject1.Features
         }
         
         [NUnit.Framework.TestAttribute()]
+
         [NUnit.Framework.DescriptionAttribute("User Approval")]
         [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void UserApproval()
+
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Approval", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -103,6 +109,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
+
  testRunner.Given("QA enviroment login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
@@ -134,6 +141,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 16
  testRunner.And("Select User Approvals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+
 #line hidden
             }
             this.ScenarioCleanup();

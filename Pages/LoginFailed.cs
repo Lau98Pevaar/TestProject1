@@ -27,9 +27,9 @@ namespace TestProject1.Pages
         public IWebElement ContainerResetPassword => Driver.FindElement(By.XPath("/html/body/div[1]/div/div/div"));
         public IWebElement NextButton => Driver.FindElement(By.XPath("/html/body/div[1]/div/div/div/div/form/div/button"));
         public IWebElement ClickResetPassword => Driver.FindElement(By.XPath("/html/body/div[1]/div/div/div/div/form/div/button"));
-        
-        //public IWebElement ClickQAButton = Driver.FindElement(By.XPath("/html/body/div[1]/div/div/div/div/a")); 
-
+        public IWebElement ClickQAButton => Driver.FindElement(By.XPath("/html/body/div[1]/div/div/div/div/a")); 
+        public IWebElement txtNewPassword => Driver.FindElement(By.Id("Password"));
+        public IWebElement txtConfirmPassword => Driver.FindElement(By.Id("password_confirm"));
         public bool ElementExist(IWebElement e) => e.Displayed;
         public void EnterUserNameAndPassword(string Email, string Password)
         {
