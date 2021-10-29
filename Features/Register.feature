@@ -7,8 +7,10 @@ Scenario: Register in QA
 	And Register button exists
 	When Click the register button
 	And Fill all fields about personal information
+
 	| Name     | LastName   | Email                  |
 	| Test     | Autom      | testautom@gmail.com    |
+
 	And Click on the first Next button
 	And Fill all fields about location
 	And Click on the second Next button

@@ -119,6 +119,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Test",
                             "Autom",
                             "testautom@gmail.com"});
+
 #line 9
  testRunner.And("Fill all fields about personal information", ((string)(null)), table3, "And ");
 #line hidden
