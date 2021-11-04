@@ -15,6 +15,7 @@ namespace TestProject1.StepDefinitions
         Register3Security Register3security = new Register3Security();
         Register4Comunication Register4comunication = new Register4Comunication();
         Register5Successful Register5successful = new Register5Successful();
+        public string Usernamerecently;
         [Given(@"Register button exists")]
         public void GivenRegisterButtonExists()
         {
@@ -30,7 +31,9 @@ namespace TestProject1.StepDefinitions
         [When(@"Fill all fields about personal information")]
         public void WhenFillAllFieldsAboutPersonalInformation(Table table)
         {
+            
             dynamic data = table.CreateDynamicInstance();
+            Usernamerecently = data.Email;
             Register1info.EnterNameLastNameAndEmail(data.Name, data.LastName, data.Email);
 
             

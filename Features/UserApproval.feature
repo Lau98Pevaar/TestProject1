@@ -10,8 +10,10 @@ Scenario: User Approval
     | laura.moreno@pevaar.com  |   Stephany091098     |
 	And  Move the remember me switch
 	And  Select Next button login
-	And Click on My Profile Menu
+	
 	And Switch to admin
+	| UserType |
+	|  Admin   |
 	And Select Admin Component 
 	And Select User Approvals
 	And Search the user recently registered
