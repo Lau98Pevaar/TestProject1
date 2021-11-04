@@ -11,17 +11,12 @@ namespace TestProject1.StepDefinitions
     {
         UserApproval Userapproval = new UserApproval();
 
-        [When(@"Click on My Profile Menu")]
-        public void WhenClickOnMyProfileMenu()
-        {
-            Userapproval.MyProfileMenu.Click();
-        }
         
         [When(@"Switch to admin")]
         public void WhenSwitchToAdmin()
         {
             Userapproval.SwitchToAdmin.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(10);
             //Assert.That(Userapproval.WelcomeToAdminPage, Is.True, "Welcome to Admin Page did not displayed");
         }
         
@@ -37,14 +32,14 @@ namespace TestProject1.StepDefinitions
         {
 
             Userapproval.UserApprovalsOption.Click();
-            
-            Assert.That(Userapproval.WelcomeToAdminPage, Is.True, "/html/body/app-root/app-dashboard/div/section[1]/div/app-approvals/app-users-approval/div[2]");
+            Thread.Sleep(30);
+            //Assert.That(Userapproval.WelcomeToAdminPage, Is.True, "/html/body/app-root/app-dashboard/div/section[1]/div/app-approvals/app-users-approval/div[2]");
         }
         [When(@"Search the user recently registered")]
         public void WhenSearchTheUserRecentlyRegistered()
         {
-            Userapproval.SearchInput.Click();
             Userapproval.SearchName();
+            Thread.Sleep(3000);
         }
 
     }

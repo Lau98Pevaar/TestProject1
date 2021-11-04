@@ -123,7 +123,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 13
  testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "UserType"});
+                table2.AddRow(new string[] {
+                            "fghfgh"});
 #line 14
+ testRunner.And("Switch to admin", ((string)(null)), table2, "And ");
+#line hidden
+#line 17
     testRunner.Then("Shows the Dashboard LH", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

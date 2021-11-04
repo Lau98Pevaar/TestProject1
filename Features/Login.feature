@@ -11,6 +11,9 @@ Scenario: Login in QA
     | ruxigu@thecarinformation.com   |   Prueba1#    |
 	And  Move the remember me switch
 	And  Select Next button login
+	And Switch to admin
+	| UserType |
+	| fghfgh    |
     Then Shows the Dashboard LH
 
 	
