@@ -12,6 +12,14 @@ namespace TestProject1.StepDefinitions
         UserApproval Userapproval = new UserApproval();
 
         
+        [When(@"Switch to admin")]
+        public void WhenSwitchToAdmin()
+        {
+            Userapproval.SwitchToAdmin.Click();
+            Thread.Sleep(10);
+            //Assert.That(Userapproval.WelcomeToAdminPage, Is.True, "Welcome to Admin Page did not displayed");
+        }
+        
         [When(@"Select Admin Component")]
         public void WhenSelectAdminComponent()
         {

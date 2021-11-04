@@ -24,4 +24,8 @@
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.22" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="FilesExcel\" />
+  </ItemGroup>
+
 </Project>
