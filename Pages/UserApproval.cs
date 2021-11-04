@@ -10,7 +10,7 @@ namespace TestProject1.Pages
 
         public IWebElement MyProfileMenu => Driver.FindElement(By.XPath("/html/body/app-root/app-home/app-synapze-app-menu/div/div[2]/nav/div/ul/user-profile-menu/li/a"));
         public IWebElement SwitchToAdmin => Driver.FindElement(By.XPath("/html/body/app-root/app-home/app-synapze-app-menu/div/div[2]/nav/div/ul/user-profile-menu/li/div/div/a[1]/div"));
-        
+        //public IWebElement SwitchToAdmin => Driver.FindElement(By.XPath("/html/body/app-root/app-home/app-synapze-app-menu/div/div[2]/nav/div/ul/user-profile-menu/li/div/div/a[1]"));
         public IWebElement WelcomeToAdminPage => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-admin-home/div"));
 
         public IWebElement AdminComponent => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[2]/div[2]/div/div/ul/li[3]/a"));

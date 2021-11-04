@@ -21,7 +21,7 @@ namespace TestProject1.StepDefinitions
         public void WhenSwitchToAdmin()
         {
             Userapproval.SwitchToAdmin.Click();
-            Thread.Sleep(10);
+            Thread.Sleep(1000);
             //Assert.That(Userapproval.WelcomeToAdminPage, Is.True, "Welcome to Admin Page did not displayed");
         }
         

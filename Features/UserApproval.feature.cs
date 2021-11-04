@@ -35,9 +35,7 @@ namespace TestProject1.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "UserApproval", "\tUser Approval by admin", ProgrammingLanguage.CSharp, ((string[])(null)));
-
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,18 +74,14 @@ namespace TestProject1.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-
         [NUnit.Framework.DescriptionAttribute("User Approval")]
         [NUnit.Framework.CategoryAttribute("mytag")]
         public virtual void UserApproval()
-
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Approval", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -109,20 +103,19 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
-
  testRunner.Given("QA enviroment login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
  testRunner.And("Find the text box to enter the Email, Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "laura.moreno@pevaar.com",
                             "Stephany091098"});
 #line 8
- testRunner.When("Fill the fields", ((string)(null)), table5, "When ");
+ testRunner.When("Fill the fields", ((string)(null)), table6, "When ");
 #line hidden
 #line 11
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -141,7 +134,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 16
  testRunner.And("Select User Approvals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-
+#line hidden
+#line 17
+ testRunner.And("Search the user recently registered", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
