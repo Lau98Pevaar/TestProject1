@@ -108,14 +108,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.And("Find the text box to enter the Email, Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "ruxigu@thecarinformation.com",
                             "Prueba1#"});
 #line 8
- testRunner.When("Fill the fields", ((string)(null)), table1, "When ");
+ testRunner.When("Fill the fields", ((string)(null)), table3, "When ");
 #line hidden
 #line 11
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

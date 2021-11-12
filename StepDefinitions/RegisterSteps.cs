@@ -1,4 +1,7 @@
 ﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Threading;
 using TechTalk.SpecFlow;
@@ -60,10 +63,11 @@ namespace TestProject1.StepDefinitions
         [When(@"Fill all fields about location")]
         public void WhenFillAllFieldsAboutLocation()
         {
+
             //Assert.That(Register2location.DropdownLocation.Displayed, Is.True, "Location dropdown didn't displayed");
             Thread.Sleep(1000);
             Register2location.DropdownLocation.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
             Register2location.DropdownLocation.Click();
             
             //Register2location.DropdownLocation.Click(>);
@@ -100,8 +104,24 @@ namespace TestProject1.StepDefinitions
         [When(@"Select language, read all and click on both switches for comunication")]
         public void WhenSelectLanguageReadAllAndClickOnBothSwitchesForComunication()
         {
+            Thread.Sleep(2000);
+            
             Register4comunication.MoveUpdateSwitch.Click();
+            Thread.Sleep(10000);
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.Id("privacyPolicyModal")));
+            //Register4comunication.ButtonPolicyAndPrivacyLink.Click();
+            Register4comunication.ButtonPolicyAndPrivacyLink.Click();
+            Thread.Sleep(5000);
+            Register4comunication.ClosePolicyAndPriv.Click();
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.Id("privacyPolicyModal")));
+            Thread.Sleep(5000);
+            Register4comunication.TermsAndConditionLink.Click();
+            Thread.Sleep(5000);
+            Register4comunication.CloseTermsAndCondition.Click();
+            Thread.Sleep(5000);
             Register4comunication.AgreeSwitch.Click();
+            //Thread.Sleep(1000);
         }
         
         [When(@"Click on the fourth Next button")]

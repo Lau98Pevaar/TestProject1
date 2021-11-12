@@ -1,8 +1,8 @@
-﻿Feature: UserApproval
-	User Approval by admin
+﻿Feature: Certificates
+	Create a certificate
 
 @mytag
-Scenario: User Approval
+Scenario: Create certificates
 	Given QA enviroment login
 	And  Find the text box to enter the Email, Password
 	When Fill the fields
@@ -14,10 +14,8 @@ Scenario: User Approval
 	And Switch to admin
 	| UserType |
 	|  Admin   |
-	And Select Admin Component 
-	And Select User Approvals
-	And Search the user recently registered
-	| UserForApproval      |
-	| mortohakku@vusra.com |
-	And Select the user found
-	Then No matching records found
+	And Select Certificates Component
+	And Fill all text boxes about certificates
+	And Upload logo, background and sognature
+	And Save and publish the certificate
+	Then Shows the certificates table
