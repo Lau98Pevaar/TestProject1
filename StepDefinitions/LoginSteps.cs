@@ -67,7 +67,19 @@ namespace TestProject1.Feature
             {
                 Userapproval.MyProfileMenu.Click();
                 Userapproval.SwitchToAdmin.Click();
-                Thread.Sleep(1000);
+                //Thread.Sleep(5000);
+                //WaitForElement(Userapproval.MyProfileMenu);
+            }
+           else if (Usertype == "New")
+            {
+                loginPage.AdministrativeProcesses.Click();
+                loginPage.Algebra.Click();
+                loginPage.Books.Click();
+                loginPage.Geometria.Click();
+                loginPage.Microsoft.Click();
+                loginPage.Music.Click();
+                loginPage.ContinueBtn.Click();
+                loginPage.GotIt.Click();
             }
             else
             {
@@ -82,7 +94,7 @@ namespace TestProject1.Feature
             if (Usertype == "Admin")
             {
                 Assert.That(loginPage.WelcomeToAdminPage.Displayed, Is.True, "Welcome to admin page did not displayed");
-                Thread.Sleep(1000);
+                //Thread.Sleep(1000);
             }
             else {
                 Assert.That(loginPage.dashboardLH.Displayed, Is.True, " Dashboard did not displayed");

@@ -9,7 +9,7 @@ Scenario: Register in QA
 	And Fill all fields about personal information
 
 	| Name     | LastName   | Email                  |
-	| Test     | Autom      | testautom@gmail.com    |
+	| Test     | Autom      | mirzefulme8@vusra.com   |
 
 	And Click on the first Next button
 	And Fill all fields about location
