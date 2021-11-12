@@ -111,52 +111,52 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("Click the register button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "LastName",
                             "Email"});
-                table3.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Test",
                             "Autom",
                             "testautom@gmail.com"});
 #line 9
- testRunner.And("Fill all fields about personal information", ((string)(null)), table3, "And ");
-#line hidden
-#line 12
- testRunner.And("Click on the first Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 13
- testRunner.And("Fill all fields about location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Fill all fields about personal information", ((string)(null)), table6, "And ");
 #line hidden
 #line 14
+ testRunner.And("Click on the first Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 15
+ testRunner.And("Fill all fields about location", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
  testRunner.And("Click on the second Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Password",
                             "AnswerA",
                             "AnswerB",
                             "AnswerC"});
-                table4.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "Abc123",
                             "Answer",
                             "Answer",
                             "Answer"});
-#line 15
- testRunner.And("Fill all fields about security", ((string)(null)), table4, "And ");
-#line hidden
-#line 18
- testRunner.And("Click on the third Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 19
- testRunner.And("Select language, read all and click on both switches for comunication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.And("Fill all fields about security", ((string)(null)), table7, "And ");
 #line hidden
 #line 20
- testRunner.And("Click on the fourth Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Click on the third Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
- testRunner.And("Click login button at register successfull page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Select language, read all and click on both switches for comunication", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 22
+ testRunner.And("Click on the fourth Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 23
+ testRunner.And("Click login button at register successfull page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
  testRunner.Then("Shows Login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

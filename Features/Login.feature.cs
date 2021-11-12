@@ -108,14 +108,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.And("Find the text box to enter the Email, Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "ruxigu@thecarinformation.com",
                             "Prueba1#"});
 #line 9
- testRunner.When("Fill the fields", ((string)(null)), table2, "When ");
+ testRunner.When("Fill the fields", ((string)(null)), table3, "When ");
 #line hidden
 #line 12
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -123,12 +123,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 13
  testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserType"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "fghfgh"});
 #line 14
- testRunner.And("Switch to admin", ((string)(null)), table2, "And ");
+ testRunner.And("Switch to admin", ((string)(null)), table4, "And ");
 #line hidden
 #line 17
     testRunner.Then("Shows the Dashboard LH", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

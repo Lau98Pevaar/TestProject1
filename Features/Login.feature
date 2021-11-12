@@ -13,7 +13,7 @@ Scenario: Login in QA
 	And  Select Next button login
 	And Switch to admin
 	| UserType |
-	| fghfgh    |
+	| fghfgh   |
     Then Shows the Dashboard LH
 
 	

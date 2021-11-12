@@ -15,7 +15,6 @@ namespace TestProject1.StepDefinitions
         [When(@"Select Admin Component")]
         public void WhenSelectAdminComponent()
         {
-            
             Userapproval.AdminComponent.Click();
         }
         
@@ -30,7 +29,7 @@ namespace TestProject1.StepDefinitions
         [When(@"Search the user recently registered")]
         public void WhenSearchTheUserRecentlyRegistered()
         {
-            Userapproval.SearchName("Laura");
+            //Userapproval.SearchName("Laura");
             Thread.Sleep(3000);
         }
 

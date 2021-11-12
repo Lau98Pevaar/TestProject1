@@ -123,23 +123,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "UserType"});
+                table2.AddRow(new string[] {
+                            "Admin"});
 #line 13
- testRunner.And("Click on My Profile Menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
- testRunner.And("Switch to admin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 15
- testRunner.And("Select Admin Component", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Switch to admin", ((string)(null)), table2, "And ");
 #line hidden
 #line 16
- testRunner.And("Select User Manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Select Admin Component", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.And("Select Import Users Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Select User Manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
+ testRunner.And("Select Import Users Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
  testRunner.And("Select Upload Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 20
+ testRunner.And("Select Ok Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+    testRunner.Then("Shows page User Manager", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
