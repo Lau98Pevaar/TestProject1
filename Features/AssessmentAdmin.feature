@@ -1,9 +1,9 @@
-﻿Feature: ImportUsers
-	ImportUsers in QA
+﻿Feature: AssessmentAdmin
+   Creation of Assessment
 
-@ImportUser
-Scenario: ImportUsers in QA
-    Given QA enviroment login
+@mytag
+Scenario: Add two numbers
+	Given QA enviroment login
 	And  Find the text box to enter the Email, Password
 	When Fill the fields
 	| Email                          | Password      |
@@ -14,8 +14,3 @@ Scenario: ImportUsers in QA
 	| UserType |
 	| Admin    |
 	And Select Admin Component 
-	And Select User Manager
-	And Select Import Users Button
-	And Select Upload Button
-	And Select Ok Button
-    Then Shows page User Manager

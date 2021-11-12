@@ -97,8 +97,42 @@ namespace TestProject1.Feature
                 //Thread.Sleep(1000);
             }
             else {
-                Assert.That(loginPage.dashboardLH.Displayed, Is.True, " Dashboard did not displayed");
-                Thread.Sleep(1000);
+                
+                Thread.Sleep(5000);
+                Assert.That(loginPage.dashboardLH.Displayed, Is.True,"Dashboard did not displayed");
+                // Dashboard Header
+                Assert.That(loginPage.navEvents.Displayed, Is.True,"Title Events did not displayed");
+                Assert.That(loginPage.navExplore.Displayed, Is.True,"Title Explore did not displayed");
+                Assert.That(loginPage.navLearn.Displayed, Is.True,"Title Learn did not displayed");
+                Assert.That(loginPage.navNews.Displayed, Is.True,"Title News did not displayed");
+                Assert.That(loginPage.navTrivia.Displayed, Is.True,"Title Trivia did not displayed");
+                Assert.That(loginPage.ImageHeader.Displayed, Is.True,"Image Header did not displayed");
+                // Dashboard Filters
+                Assert.That(loginPage.btnFilter.Displayed, Is.True,"Button Filter did not displayed");
+                Assert.That(loginPage.searchBar.Displayed, Is.True, "Search Bar did not displayed");
+                Assert.That(loginPage.btnSearch.Displayed, Is.True, "Button Search did not displayed");
+                Assert.That(loginPage.btnClear.Displayed, Is.True, "Clear Button did not displayed");
+                loginPage.btnFilter.Click();
+                Assert.That(loginPage.filterFrom.Displayed, Is.True, "Field From did not displayed");
+                Assert.That(loginPage.filterTo.Displayed, Is.True, "Field To did not displayed");
+                Assert.That(loginPage.filterTopics.Displayed, Is.True, "Field Topics did not displayed");
+                Assert.That(loginPage.filterBtnClear.Displayed, Is.True, "Button Clear in filter did not displayed");
+                Assert.That(loginPage.filterBtnApply.Displayed, Is.True, "Button Apply in filter did not displayed");
+                loginPage.filterBtnApply.Click();
+                Thread.Sleep(5000);
+                // Dashboard Body
+                Assert.That(loginPage.topic1.Displayed, Is.True,"Section Topic 1 did not displayed");
+                Assert.That(loginPage.topic2.Displayed, Is.True,"Section Topic 2 did not displayed");
+                Assert.That(loginPage.topic3.Displayed, Is.True,"Section Topic 3 did not displayed");
+                Assert.That(loginPage.containerTopics.Displayed, Is.True, "Container Topics did not displayed");
+                // Dashboard Footer
+                Assert.That(loginPage.progressCorePath.Displayed, Is.True,"Progress Core Path did not displayed");
+                Assert.That(loginPage.resources.Displayed, Is.True,"Section Resources did not displayed");
+                Assert.That(loginPage.rFavorites.Displayed, Is.True,"Section Favorites Resources did not displayed");
+                Assert.That(loginPage.rTrending.Displayed, Is.True,"Section Trending Resources did not displayed");
+                Assert.That(loginPage.containerResources.Displayed, Is.True, "Container Resources did not displayed");
+                Assert.That(loginPage.containerTimeResources.Displayed, Is.True, "Container Time Resources did not displayed");
+
             }
             
 

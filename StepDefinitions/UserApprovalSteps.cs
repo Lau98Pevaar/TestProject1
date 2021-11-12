@@ -20,7 +20,9 @@ namespace TestProject1.StepDefinitions
         [When(@"Select Admin Component")]
         public void WhenSelectAdminComponent()
         {
+
             Assert.That(Userapproval.AdminComponent.Displayed, Is.True, "User Approvals option did not displayer");
+
             Userapproval.AdminComponent.Click();
         }
         
@@ -61,10 +63,11 @@ namespace TestProject1.StepDefinitions
         [Then(@"No matching records found")]
         public void ThenNoMatchingRecordsFound()
         {
-            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
 
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
             wait.Until(driver => Userapproval.NoResults.Displayed);
             Assert.That(Userapproval.NoResults.Displayed, Is.True, " the user is not approved");
+
         }
 
 

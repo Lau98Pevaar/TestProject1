@@ -8,12 +8,12 @@ Scenario: Login in QA
 	And  Find the text box to enter the Email, Password
 	When Fill the fields
 	| Email                         	 | Password      |
-    |	mortohakku@vusra.com          |   Abc123      |
+  |	mortohakku@vusra.com          |   Abc123      |
 	And  Move the remember me switch
 	And  Select Next button login
 	And Switch to admin
-	| UserType  |
-	| New       |
-    Then Shows the Dashboard LH
+	| UserType |
+	| fghfgh   |
+   Then Shows the Dashboard LH
 
 	
