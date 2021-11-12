@@ -9,13 +9,13 @@ namespace TestProject1.Pages.Register
     {
         public IWebElement MoveUpdateSwitch => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[5]/div/div[2]/div/div[2]/label/span"));
 
-       public IWebElement ButtonPolicyAndPrivacyLink => Driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div/div[3]/button"));
+       public IWebElement ButtonPolicyAndPrivacyLink => Driver.FindElement(By.Id("PrivacyPolicy"));
 
         public IWebElement PagePolicyAndPrivacy => Driver.FindElement(By.Id("privacyPolicyModal"));
 
         public IWebElement ClosePolicyAndPriv => Driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div/div[3]/button"));
 
-        public IWebElement TermsAndConditionLink => Driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div/div/div[3]/button"));
+        public IWebElement TermsAndConditionLink => Driver.FindElement(By.XPath("TermsAndConditions"));
 
         public IWebElement PageTermsAndConditionLink => Driver.FindElement(By.Id("termsModal"));
         public IWebElement CloseTermsAndCondition => Driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div/div/div[3]/button"));
