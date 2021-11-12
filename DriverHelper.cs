@@ -10,7 +10,8 @@ namespace TestProject1
     public class DriverHelper
     {
         public static IWebDriver Driver { get; set; }
-        
+        public string PathFiles = Path.GetFullPath("../../..");
+
         //public WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
 
     }

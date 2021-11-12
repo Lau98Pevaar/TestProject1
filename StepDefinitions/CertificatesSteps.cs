@@ -20,7 +20,7 @@ namespace TestProject1.StepDefinitions
             Thread.Sleep(1000);
             
             Certificatespage.CreateCertificateBtn.Click();
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
 
         }
         [When(@"Fill all text boxes about certificates")]
@@ -30,22 +30,25 @@ namespace TestProject1.StepDefinitions
             Certificatespage.TxtTitle.SendKeys(Certificatespage.Title);
             Certificatespage.TxtSignName.SendKeys("Clark Rent");
             Certificatespage.TxtSignRole.SendKeys("Director");
+            Thread.Sleep(2000);
         }
 
-        [When(@"Upload logo, background and sognature")]
+        [When(@"Upload logo, background and signature")]
         public void WhenUploadLogoBackgroundAndSignature()
         {
-            Certificatespage.FileLogo.SendKeys(Certificatespage.PathFiles + @"\Files\logo.gif");
-            Certificatespage.FileBackground.SendKeys(Certificatespage.PathFiles + @"\Files\background.png");
-            Certificatespage.FileSignature.SendKeys(@Certificatespage.PathFiles + @"\Files\signature.png");
+            Certificatespage.FileLogo.SendKeys(PathFiles + @"\Files\logo.gif");
+            Certificatespage.FileBackground.SendKeys(PathFiles + @"\Files\background.png");
+            Certificatespage.FileSignature.SendKeys(PathFiles + @"\Files\signature.png");
             Thread.Sleep(5000);
         }
 
         [When(@"Save and publish the certificate")]
         public void WhenSaveAndPublishTheCertificate()
         {
+            while (Certificatespage.SaveBtn.Enabled == false)
+            { }
+            { Certificatespage.SaveBtn.Click(); }
             
-            Certificatespage.SaveBtn.Click();
             Thread.Sleep(3000);
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
             //wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("/html/body/div[2]/div/div[3]/button[1]")));

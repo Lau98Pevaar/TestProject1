@@ -137,7 +137,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Fill all text boxes about certificates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
- testRunner.And("Upload logo, background and sognature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Upload logo, background and signature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
  testRunner.And("Save and publish the certificate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

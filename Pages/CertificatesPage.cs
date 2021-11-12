@@ -15,7 +15,7 @@ namespace TestProject1.Pages
         public IWebElement TxtTitle => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-edit-certificate/content-loader/div/div/form/div[2]/div/div/synapze-cx-form-control/input"));
         public string Title= "Title Certificate Demo";
         public IWebElement FileLogo => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-edit-certificate/content-loader/div/div/form/div[4]/div/div[2]/upload-image-withpreview/div/label/input"));
-        public string PathFiles = Path.GetFullPath("../../..");
+        
 
         public IWebElement FileBackground => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-edit-certificate/content-loader/div/div/form/div[5]/div/div[2]/upload-image-withpreview/div/label/input"));
         public IWebElement FileSignature => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-edit-certificate/content-loader/div/div/form/div[7]/div/div[2]/upload-image-withpreview/div/label/input"));
