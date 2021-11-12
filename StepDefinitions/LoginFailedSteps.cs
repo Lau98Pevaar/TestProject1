@@ -87,7 +87,7 @@ namespace TestProject1.StepDefinitions
         [When(@"Fill the New Password")]
         public void WhenFillTheNewPassword()
         {
-            String Password = "Password15#";
+            String Password = "Password21#";
             Assert.That(loginFailedPage.ElementExist(loginFailedPage.txtNewPassword), Is.True, "Box Text Password did not displayed");
             loginFailedPage.txtNewPassword.SendKeys(Password);
 
