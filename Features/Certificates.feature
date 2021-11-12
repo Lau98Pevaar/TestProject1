@@ -16,6 +16,6 @@ Scenario: Create certificates
 	|  Admin   |
 	And Select Certificates Component
 	And Fill all text boxes about certificates
-	And Upload logo, background and sognature
+	And Upload logo, background and signature
 	And Save and publish the certificate
 	Then Shows the certificates table

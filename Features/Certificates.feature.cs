@@ -108,14 +108,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.And("Find the text box to enter the Email, Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "laura.moreno@pevaar.com",
                             "Stephany091098"});
 #line 8
- testRunner.When("Fill the fields", ((string)(null)), table1, "When ");
+ testRunner.When("Fill the fields", ((string)(null)), table3, "When ");
 #line hidden
 #line 11
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -123,12 +123,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserType"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Admin"});
 #line 14
- testRunner.And("Switch to admin", ((string)(null)), table2, "And ");
+ testRunner.And("Switch to admin", ((string)(null)), table4, "And ");
 #line hidden
 #line 17
  testRunner.And("Select Certificates Component", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -137,7 +137,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Fill all text boxes about certificates", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 19
- testRunner.And("Upload logo, background and sognature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Upload logo, background and signature", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
  testRunner.And("Save and publish the certificate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

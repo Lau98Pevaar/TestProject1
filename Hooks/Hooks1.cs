@@ -15,7 +15,7 @@ namespace TestProject1.Hooks
     public sealed class Hooks1 : DriverHelper
     {
         public String saveFile;
-        private ITakesScreenshot webDriver;
+        //private ITakesScreenshot webDriver;
 
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
 
