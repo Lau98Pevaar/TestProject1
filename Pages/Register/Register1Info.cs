@@ -30,6 +30,7 @@ namespace TestProject1.Pages.Register
 		//public IWebElement DropdownSpecialityOptions => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[1]/div/div/div/div/div[2]"));
 		
 		public IWebElement SelectSpeciality => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div/div[1]"));
+		public IWebElement SelectSpeciality1 => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[1]/div/div/div/div/div[2]/div/div[2]"));
 		//-
 		//Role
 		public IWebElement DropdownRole => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[2]/div/div/div/div/div[1]"));
@@ -37,6 +38,9 @@ namespace TestProject1.Pages.Register
 		public IWebElement DropdownRoleOptions => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[2]/div/div/div/div/div[2]"));
 		
 		public IWebElement SelectRole => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div/div"));
+		public IWebElement SelectRole1 => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]"));
+		public IWebElement SelectRole2 => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div/div[2]"));
+		
 		
 		//Next B
 		public IWebElement NextButton => Driver.FindElement(By.Id("nextBtn1"));

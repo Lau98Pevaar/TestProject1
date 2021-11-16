@@ -118,7 +118,7 @@ this.ScenarioInitialize(scenarioInfo);
                 table10.AddRow(new string[] {
                             "Test",
                             "Autom",
-                            "mirzefulme8@vusra.com"});
+                            "detrimotri3@vusra.com"});
 #line 9
  testRunner.And("Fill all fields about personal information", ((string)(null)), table10, "And ");
 #line hidden
