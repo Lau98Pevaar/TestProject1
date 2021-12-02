@@ -24,7 +24,7 @@ namespace TestProject1.StepDefinitions
         public void WhenSelectImportUsersButton()
         {
             Thread.Sleep(2000);
-            ImportUserPage.ImportUsersButton.SendKeys(PathFiles + @"\Files\Resources\UserImportTemplate.xlsm");
+            ImportUserPage.ImportUsersButton.SendKeys(@"C:\Users\Public\Archivos\UserImportTemplate.xlsm");
         }
         [When(@"Select Upload Button")]
         public void WhenSelectUploadButton()

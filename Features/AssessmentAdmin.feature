@@ -2,7 +2,7 @@
    Creation of Assessment
 
 @mytag
-Scenario: Creation of Assessment
+Scenario: Add two numbers
 	Given QA enviroment login
 	And  Find the text box to enter the Email, Password
 	When Fill the fields
@@ -13,14 +13,4 @@ Scenario: Creation of Assessment
 	And Switch to admin
 	| UserType |
 	| Admin    |
-	And Select Assessment Component
-	And Select Assessment set
-	And Select New Assesment
-	And Fill the title and date fields
-	And Choose the type of assessment
-	| AssessmentType | TriviaType    |
-	| Trivia         | RapidFire     |
-	And Fill all text boxes
-	And Complete the form
-    Then Shows the Assessment
-	
+	And Select Admin Component 
