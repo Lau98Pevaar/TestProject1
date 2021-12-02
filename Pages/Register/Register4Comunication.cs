@@ -15,7 +15,7 @@ namespace TestProject1.Pages.Register
 
         public IWebElement ClosePolicyAndPriv => Driver.FindElement(By.XPath("/html/body/div[1]/div[2]/div/div/div[3]/button"));
 
-        public IWebElement TermsAndConditionLink => Driver.FindElement(By.XPath("TermsAndConditions"));
+        public IWebElement TermsAndConditionLink => Driver.FindElement(By.Id("TermsAndConditions"));
 
         public IWebElement PageTermsAndConditionLink => Driver.FindElement(By.Id("termsModal"));
         public IWebElement CloseTermsAndCondition => Driver.FindElement(By.XPath("/html/body/div[1]/div[3]/div/div/div[3]/button"));

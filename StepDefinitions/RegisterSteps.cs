@@ -105,23 +105,16 @@ namespace TestProject1.StepDefinitions
         public void WhenSelectLanguageReadAllAndClickOnBothSwitchesForComunication()
         {
             Thread.Sleep(2000);
-            
-            Register4comunication.MoveUpdateSwitch.Click();
-            Thread.Sleep(10000);
-            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
-            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.Id("privacyPolicyModal")));
-            //Register4comunication.ButtonPolicyAndPrivacyLink.Click();
-            Register4comunication.ButtonPolicyAndPrivacyLink.Click();
-            Thread.Sleep(5000);
-            Register4comunication.ClosePolicyAndPriv.Click();
-            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.Id("privacyPolicyModal")));
-            Thread.Sleep(5000);
-            Register4comunication.TermsAndConditionLink.Click();
-            Thread.Sleep(5000);
+               
+            Register4comunication.MoveUpdateSwitch.Click();            
+            Register4comunication.ButtonPolicyAndPrivacyLink.Click();            
+            Register4comunication.ClosePolicyAndPriv.Click();            
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.Id("privacyPolicyModal")));            
+            Register4comunication.TermsAndConditionLink.Click();            
             Register4comunication.CloseTermsAndCondition.Click();
-            Thread.Sleep(5000);
+            wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.Id("termsModal")));
             Register4comunication.AgreeSwitch.Click();
-            //Thread.Sleep(1000);
+            
         }
         
         [When(@"Click on the fourth Next button")]

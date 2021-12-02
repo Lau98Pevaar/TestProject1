@@ -45,12 +45,12 @@ namespace TestProject1.StepDefinitions
         [When(@"Save and publish the certificate")]
         public void WhenSaveAndPublishTheCertificate()
         {
-            while (Certificatespage.SaveBtn.Enabled == false)
-            { }
-            { Certificatespage.SaveBtn.Click(); }
+            //while (Certificatespage.SaveBtn.Enabled == false)
+            //{ }
+            Certificatespage.SaveBtn.Click(); 
             
             Thread.Sleep(3000);
-            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
+            
             //wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("/html/body/div[2]/div/div[3]/button[1]")));
             Certificatespage.ConfirmSaveBtn.Click();
             wait.Until(ExpectedConditions.TextToBePresentInElementLocated(By.XPath("/html/body/modal-container/div/div/div[2]/div/div[2]"), "Success"));
@@ -62,11 +62,10 @@ namespace TestProject1.StepDefinitions
         [Then(@"Shows the certificates table")]
         public void ThenShowsTheCertificatesTable()
         {
-            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
-            
+                        
             wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath("/html/body/app-root/app-dashboard/div/section[1]/div/app-approvals/app-users-approval/div[2]/div/content-loader")));
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(Certificatespage.FirstElementTable)));
-            Assert.That(Certificatespage.FirstElementTitle.Equals(Certificatespage.Title), Is.True, "QWorker");
+            Assert.That(Certificatespage.FirstElementTitle.Contains(Certificatespage.Title), Is.True, "QWorker");
 
 
 
