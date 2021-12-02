@@ -108,14 +108,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.And("Find the text box to enter the Email, Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table12.AddRow(new string[] {
+                table16.AddRow(new string[] {
                             "laura.moreno@pevaar.com",
                             "Stephany091098"});
 #line 8
- testRunner.When("Fill the fields", ((string)(null)), table12, "When ");
+ testRunner.When("Fill the fields", ((string)(null)), table16, "When ");
 #line hidden
 #line 11
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -123,12 +123,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserType"});
-                table13.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "Admin"});
 #line 14
- testRunner.And("Switch to admin", ((string)(null)), table13, "And ");
+ testRunner.And("Switch to admin", ((string)(null)), table17, "And ");
 #line hidden
 #line 17
  testRunner.And("Select Admin Component", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -136,12 +136,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 18
  testRunner.And("Select User Approvals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserForApproval"});
-                table14.AddRow(new string[] {
+                table18.AddRow(new string[] {
                             "mortohakku@vusra.com"});
 #line 19
- testRunner.And("Search the user recently registered", ((string)(null)), table14, "And ");
+ testRunner.And("Search the user recently registered", ((string)(null)), table18, "And ");
 #line hidden
 #line 22
  testRunner.And("Select the user found", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
