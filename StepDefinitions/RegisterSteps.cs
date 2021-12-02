@@ -105,7 +105,7 @@ namespace TestProject1.StepDefinitions
         public void WhenSelectLanguageReadAllAndClickOnBothSwitchesForComunication()
         {
             Thread.Sleep(2000);
-               
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
             Register4comunication.MoveUpdateSwitch.Click();            
             Register4comunication.ButtonPolicyAndPrivacyLink.Click();            
             Register4comunication.ClosePolicyAndPriv.Click();            
