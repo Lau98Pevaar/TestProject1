@@ -20,22 +20,22 @@ namespace TestProject1.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("UserApproval")]
-    public partial class UserApprovalFeature
+    [NUnit.Framework.DescriptionAttribute("CreateSubscriptions")]
+    public partial class CreateSubscriptionsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "UserApproval.feature"
+#line 1 "CreateSubscriptions.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "UserApproval", "\tUser Approval by admin", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateSubscriptions", "\tCreate subscription in LH", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,14 +74,14 @@ namespace TestProject1.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("User Approval")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void UserApproval()
+        [NUnit.Framework.DescriptionAttribute("Create subscriptions")]
+        [NUnit.Framework.CategoryAttribute("CreateSubs")]
+        public virtual void CreateSubscriptions()
         {
             string[] tagsOfScenario = new string[] {
-                    "mytag"};
+                    "CreateSubs"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User Approval", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create subscriptions", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -108,16 +108,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 7
  testRunner.And("Find the text box to enter the Email, Password", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Email",
                             "Password"});
-                table18.AddRow(new string[] {
-                            "laura.moreno@pevaar.com",
-                            "Stephany091098"});
+                table9.AddRow(new string[] {
+                            "mortohakku@vusra.com",
+                            "Abc123"});
 #line 8
- testRunner.When("Fill the fields", ((string)(null)), table18, "When ");
-
+ testRunner.When("Fill the fields", ((string)(null)), table9, "When ");
 #line hidden
 #line 11
  testRunner.And("Move the remember me switch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -125,35 +123,27 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.And("Select Next button login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "UserType"});
-                table19.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Admin"});
-#line 14
- testRunner.And("Switch to admin", ((string)(null)), table19, "And ");
-
+#line 13
+ testRunner.And("Switch to admin", ((string)(null)), table10, "And ");
+#line hidden
+#line 16
+ testRunner.And("Select Subscriptions Component", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
- testRunner.And("Select Admin Component", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Create a new Subscription", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.And("Select User Approvals", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Fill all fields about Subscriptions", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
-                            "UserForApproval"});
-                table20.AddRow(new string[] {
-                            "mortohakku@vusra.com"});
 #line 19
- testRunner.And("Search the user recently registered", ((string)(null)), table20, "And ");
-
+ testRunner.And("Save and Publish the Subscription", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
- testRunner.And("Select the user found", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 23
- testRunner.Then("No matching records found", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 20
+ testRunner.Then("Display the Subscription in the Subscriptions table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -19,13 +19,13 @@ namespace TestProject1.Feature
         [Given(@"QA enviroment login")]
         public void GivenQAEnviromentLogin()
         {
-            Assert.That(loginPage.ElementExist(loginPage.containerLogin), Is.True, "Email fields did not displayed");
+            Assert.That(loginPage.containerLogin.Displayed, Is.True, "Email fields did not displayed");
         }
         [Given(@"Find the text box to enter the Email, Password")]
         public void GivenFindTheTextBoxToEnterTheEmailPassword()
         {
-            Assert.That(loginPage.ElementExist(loginPage.txtUserName), Is.True, "Email fields did not displayed");
-            Assert.That(loginPage.ElementExist(loginPage.txtPassword), Is.True, "Password fields did not displayed");
+            Assert.That(loginPage.txtUserName.Displayed, Is.True, "Email fields did not displayed");
+            Assert.That(loginPage.txtPassword.Displayed, Is.True, "Password fields did not displayed");
         }
 
 
@@ -51,8 +51,8 @@ namespace TestProject1.Feature
         [Then(@"Find the text box to enter the Email, Password")]
         public void ThenFindTheTextBoxToEnterTheEmailPassword()
         {
-            Assert.That(loginPage.ElementExist(loginPage.txtUserName), Is.True, "Email fields did not displayed");
-            Assert.That(loginPage.ElementExist(loginPage.txtPassword), Is.True, "Password fields did not displayed");
+            Assert.That(loginPage.txtUserName.Displayed, Is.True, "Email fields did not displayed");
+            Assert.That(loginPage.txtPassword.Displayed, Is.True, "Password fields did not displayed");
         }
 
         [When(@"Switch to admin")]
@@ -101,11 +101,11 @@ namespace TestProject1.Feature
                 Thread.Sleep(5000);
                 Assert.That(loginPage.dashboardLH.Displayed, Is.True,"Dashboard did not displayed");
                 // Dashboard Header
-                Assert.That(loginPage.navEvents.Displayed, Is.True,"Title Events did not displayed");
-                Assert.That(loginPage.navExplore.Displayed, Is.True,"Title Explore did not displayed");
-                Assert.That(loginPage.navLearn.Displayed, Is.True,"Title Learn did not displayed");
-                Assert.That(loginPage.navNews.Displayed, Is.True,"Title News did not displayed");
-                Assert.That(loginPage.navTrivia.Displayed, Is.True,"Title Trivia did not displayed");
+                Assert.That(loginPage.navEvents.Displayed, Is.True,"txtTitle Events did not displayed");
+                Assert.That(loginPage.navExplore.Displayed, Is.True,"txtTitle Explore did not displayed");
+                Assert.That(loginPage.navLearn.Displayed, Is.True,"txtTitle Learn did not displayed");
+                Assert.That(loginPage.navNews.Displayed, Is.True,"txtTitle News did not displayed");
+                Assert.That(loginPage.navTrivia.Displayed, Is.True,"txtTitle Trivia did not displayed");
                 Assert.That(loginPage.ImageHeader.Displayed, Is.True,"Image Header did not displayed");
                 // Dashboard Filters
                 Assert.That(loginPage.btnFilter.Displayed, Is.True,"Button Filter did not displayed");
