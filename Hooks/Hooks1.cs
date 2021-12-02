@@ -46,10 +46,12 @@ namespace TestProject1.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
+
             Thread.Sleep(3000);
             Screenshot ss = ((ITakesScreenshot)Driver).GetScreenshot();
             ss.SaveAsFile(saveFile +"Screen.png", ScreenshotImageFormat.Png);
             Thread.Sleep(5000);
+
             //Driver.Quit();//TODO: implement logic that has to run after executing each scenario
         }
     }

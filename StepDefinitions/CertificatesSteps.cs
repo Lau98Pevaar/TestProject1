@@ -60,10 +60,12 @@ namespace TestProject1.StepDefinitions
         [Then(@"Shows the certificates table")]
         public void ThenShowsTheCertificatesTable()
         {
+
             //WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(20));
             //wait.Until(ExpectedConditions.InvisibilityOfElementLocated(By.XPath("/html/body/app-root/app-dashboard/div/section[1]/div/app-approvals/app-users-approval/div[2]/div/content-loader")));
             Thread.Sleep(5000);
             Assert.AreEqual(Certificatespage.FirstElementTable.Text, Certificatespage.Title + Actualdate, "Strings are not matching");
+
         }
 
 
