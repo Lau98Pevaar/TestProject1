@@ -38,7 +38,7 @@ namespace TestProject1.Pages
         // Dashboard Body
         public IWebElement topic1 => Driver.FindElement(By.XPath("/html/body/app-root/app-home/div/app-dashboard/app-news-feed/div[2]/div[1]/synapze-cx-newsfeed-carousel/div/div[1]/div"));
         public IWebElement topic2 => Driver.FindElement(By.XPath("/html/body/app-root/app-home/div/app-dashboard/app-news-feed/div[2]/div[2]/synapze-cx-newsfeed-carousel/div/div[1]/div"));
-        public IWebElement topic3=> Driver.FindElement(By.XPath("/html/body/app-root/app-home/div/app-dashboard/app-news-feed/div[2]/div[3]/synapze-cx-newsfeed-carousel/div/div[1]/div"));
+        public IWebElement topic3 => Driver.FindElement(By.XPath("/html/body/app-root/app-home/div/app-dashboard/app-news-feed/div[2]/div[3]/synapze-cx-newsfeed-carousel/div/div[1]/div"));
         public IWebElement containerTopics => Driver.FindElement(By.XPath("/html/body/app-root/app-home/div/app-dashboard/app-news-feed/div[2]"));
         //Dashboard Footer
         public IWebElement progressCorePath => Driver.FindElement(By.XPath("/html/body/app-root/app-home/div/app-dashboard/progress-widget/div/div[1]/div"));
@@ -59,7 +59,7 @@ namespace TestProject1.Pages
         public IWebElement GotIt => Driver.FindElement(By.XPath("/html/body/p-dynamicdialog/div/div/div[2]/app-confirmation-modal/div/button"));
         //-----------------------------------------------------------------------------------------------------
 
-        public bool ElementExist(IWebElement e) => e.Displayed;
+        //public bool ElementExist(IWebElement e) => e.Displayed;
         public void EnterUserNameAndPassword(string Email, string Password)
         {
             txtUserName.SendKeys(Email);

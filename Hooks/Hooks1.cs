@@ -37,19 +37,21 @@ namespace TestProject1.Hooks
             //TODO: implement logic that has to run before executing each scenario//TODO: implement logic that has to run before executing each scenario
             Driver = new ChromeDriver(option);
             Driver.Navigate().GoToUrl("https://lhqa.pevaar.com:446/");
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(50);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
             Directory.CreateDirectory("../../../Files"); //Crear carpeta (si no existe)
             saveFile = "../../../Files/"; //Ubicación para guardar los archivos
-            //public static string GetFullPath (string path);
+            
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            Thread.Sleep(1000);
+
+            Thread.Sleep(3000);
             Screenshot ss = ((ITakesScreenshot)Driver).GetScreenshot();
             ss.SaveAsFile(saveFile +"Screen.png", ScreenshotImageFormat.Png);
-            //Thread.Sleep(1000);
+            Thread.Sleep(5000);
+
             //Driver.Quit();//TODO: implement logic that has to run after executing each scenario
         }
     }

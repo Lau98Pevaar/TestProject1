@@ -25,7 +25,7 @@ namespace TestProject1.Pages
         public IWebElement CheckboxUserforApproval => Driver.FindElement(By.CssSelector("body > app-root > app-dashboard > div > section.mdk-drawer-layout__content.page > div > app-approvals > app-users-approval > div.card > div > synapze-cx-grid > div > table > tbody > tr:nth-child(1) > td:nth-child(2) > div"));
         //public IWebElement FirstUserforApproval => Driver.FindElement(By.XPath("/html/body/app-root/app-dashboard/div/section[1]/div/app-approvals/app-users-approval/div[2]/div/synapze-cx-grid/div/table/tbody/tr[1]/td[2]"));
 
-        public ReadOnlyCollection<IWebElement> FirstUserforApproval => Driver.FindElements(By.CssSelector("[type='checkbox']"));
+        public ReadOnlyCollection<IWebElement> FirstUserforApproval => Driver.FindElements(By.ClassName("[type='checkbox']"));
 
         public IWebElement ApproveUserBtn => Driver.FindElement(By.XPath("/html/body/app-root/app-dashboard/div/section[1]/div/app-approvals/app-users-approval/div[2]/div/div/permission-block/div/user-approval-control/button"));
 
