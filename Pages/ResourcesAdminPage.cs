@@ -13,28 +13,28 @@ namespace TestProject1.Pages
 {
     class ResourcesAdminPage : DriverHelper
     {
-        public IWebElement ResourcesComponent => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[2]/div[2]/div/div/ul/li[2]/a"));
-        public IWebElement Resources => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[2]/div[2]/div/div/ul/li[2]/ul/li[1]/a"));
-        public IWebElement NewResource => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-resources/content-loader/div/div[1]/permission-block/button"));
+        public IWebElement ResourcesComponent => Driver.FindElement(By.XPath("//a[@aria-controls='collapseBasic'and contains(text(),'Resources')]"));
+        public IWebElement Resources => Driver.FindElement(By.XPath("//a[@class='sidebar-menu-button ng-star-inserted' and @href='/admin/resources/manager']"));
+        public IWebElement NewResource => Driver.FindElement(By.XPath("//button[contains(text(), '+ New Resource')]"));
 
-        // New Resource
-
-        public IWebElement rTitle => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[1]/div[1]/div[2]/synapze-cx-form-control/div/span[1]"));
-        public IWebElement rEffectiveDate => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[1]/div[2]/div[1]/synapze-cx-form-control/synapze-cx-calendar/form/p-calendar/span/button"));
-        public IWebElement rSelectEffectiveDate => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[1]/div[2]/div[1]/synapze-cx-form-control/synapze-cx-calendar/form/p-calendar/span/div/div[2]/button[1]"));
-        public IWebElement dropCompetency => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[2]/div/div/div[1]/synapze-cx-form-control/competency-selector/form/div/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]"));
-        public By opcCompetency => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[2]/div/div/div[1]/synapze-cx-form-control/competency-selector/form/div/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[1]/li");
-        public IWebElement dropSkill => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[2]/div/div/div[2]/synapze-cx-form-control/skill-selector/form/div/synapze-cx-simple-dropdown/form/ng-select/div"));
-        public By opcSkill => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[2]/div/div/div[2]/synapze-cx-form-control/skill-selector/form/div/synapze-cx-simple-dropdown/form/ng-select/ng-dropdown-panel/div/div[2]/div[1]/div");
-        public IWebElement btnAddSkill => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[2]/div/div/div[3]/button"));
-        public IWebElement dropCategory => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[3]/div/synapze-cx-form-control/tenant-category-selector/div/form/div/div/div/div[1]/tenant-category-selector-dropdown/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]"));
-        public By opcCategory => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[3]/div/synapze-cx-form-control/tenant-category-selector/div/form/div/div/div/div[1]/tenant-category-selector-dropdown/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[1]/li");
-        public IWebElement dropSubCategory => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[3]/div/synapze-cx-form-control/tenant-category-selector/div/form/div/div/div/div[2]/tenant-category-selector-dropdown/synapze-cx-simple-dropdown/form/ng-select/div"));
-        public By opcSubCategory => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[3]/div/synapze-cx-form-control/tenant-category-selector/div/form/div/div/div/div[2]/tenant-category-selector-dropdown/synapze-cx-simple-dropdown/form/ng-select/ng-dropdown-panel/div/div[2]/div/div");
-        public IWebElement btnAddCategory => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[1]/div[3]/div/synapze-cx-form-control/tenant-category-selector/div/form/div/div/div/div[3]/button"));
-        public IWebElement btnAddMore => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-resource-view/content-loader/div/div/div/edit-resource/content-loader/div/form/div[3]/permission-block/button"));
+        //---------- New Resource ---------
+        public IWebElement RTitle => Driver.FindElement(By.Id("editableTitle"));
+        public IWebElement REffectiveDate => Driver.FindElement(By.XPath("//button[@class='ui-datepicker-trigger ui-calendar-button ng-tns-c71-22 ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ng-star-inserted']"));
+        public IWebElement RSelectEffectiveDate => Driver.FindElement(By.XPath("//span[@class='ui-button-text ui-clickable' and (contains(text(),'Hoy') or contains(text(),'Today'))]"));
+        public IWebElement DropCompetency => Driver.FindElement(By.XPath("//div[@class='ui-dropdown-trigger ui-state-default ui-corner-right ng-tns-c94-14']"));
+        public By OpcCompetency => By.XPath("//li[@aria-label='Competency 1']");
+        public IWebElement DropSkill => Driver.FindElement(By.XPath("//div[@class='ng-value-container']"));
+        public By OpcSkill => By.XPath("//div[@class='checkbox-container-list ng-star-inserted']");
+        public IWebElement BtnAddSkill => Driver.FindElement(By.XPath("//button[contains(text(), 'Add skill')]"));
+        public IWebElement DropCategory => Driver.FindElement(By.XPath("//div[@class='ui-dropdown-trigger ui-state-default ui-corner-right ng-tns-c94-17']"));
+        public By OpcCategory => By.XPath("//span[contains(text(), 'Administrative Processes')]");
+        public IWebElement DropSubCategory => Driver.FindElement(By.XPath("//div[@class='ng-select-container']"));
+        public By OpcSubCategory => By.XPath("//div[@class='checkbox-container-list ng-star-inserted']"); 
+        public IWebElement BtnAddCategory => Driver.FindElement(By.XPath("//button[@class='btn btn-primary add-tag-btn']"));
+        public IWebElement BtnAddMore => Driver.FindElement(By.XPath("//button[contains(text(), '+ Add More... ')]"));
+        
         // Complete Information 
-        public IWebElement btnAddAttachment => Driver.FindElement(By.XPath("/html/body/modal-container/div/div/div[2]/div/add-edit-asset/form/div[1]/div/synapze-cx-form-control/div/upload-media/div/label/input"));
+        public IWebElement BtnAddAttachment => Driver.FindElement(By.XPath("//button[@class='btn btn-dark add-file-btn']"));
         public IWebElement addImage => Driver.FindElement(By.XPath("/html/body/modal-container/div/div/div[2]/div/add-edit-asset/form/div[3]/div[1]/div[1]/upload-image-withpreview/div/label/input"));
         public IWebElement dropLanguage => Driver.FindElement(By.XPath("/html/body/modal-container/div/div/div[2]/div/add-edit-asset/form/div[2]/div/div/div[1]/synapze-cx-form-control/tenant-locale-selector/form/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]"));
         public By opcLanguage => By.XPath("/html/body/modal-container/div/div/div[2]/div/add-edit-asset/form/div[2]/div/div/div[1]/synapze-cx-form-control/tenant-locale-selector/form/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[2]/li");
