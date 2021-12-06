@@ -39,16 +39,16 @@ namespace TestProject1.StepDefinitions
         [When(@"Fill the title and date fields form Resource")]
         public void WhenFillTheTitleAndDateFieldsFormResource()
         {
-            Resourcesadmin.rTitle.SendKeys(NameResource);
-            Resourcesadmin.rEffectiveDate.Click();
-            Resourcesadmin.rSelectEffectiveDate.Click();
-            Resourcesadmin.SelectDropdown(Resourcesadmin.dropCompetency, Resourcesadmin.opcCompetency);
-            Resourcesadmin.SelectDropdown(Resourcesadmin.dropSkill, Resourcesadmin.opcSkill);
-            Resourcesadmin.btnAddSkill.Click();
-            Resourcesadmin.SelectDropdown(Resourcesadmin.dropCategory, Resourcesadmin.opcCategory);
-            Resourcesadmin.SelectDropdown(Resourcesadmin.dropSubCategory, Resourcesadmin.opcSubCategory);
-            Resourcesadmin.btnAddCategory.Click();
-            Resourcesadmin.btnAddMore.Click();
+            Resourcesadmin.RTitle.SendKeys(NameResource);
+            Resourcesadmin.REffectiveDate.Click();
+            Resourcesadmin.RSelectEffectiveDate.Click();
+            Resourcesadmin.SelectDropdown(Resourcesadmin.DropCompetency, Resourcesadmin.OpcCompetency);
+            Resourcesadmin.SelectDropdown(Resourcesadmin.DropSkill, Resourcesadmin.OpcSkill);
+            Resourcesadmin.BtnAddSkill.Click();
+            Resourcesadmin.SelectDropdown(Resourcesadmin.DropCategory, Resourcesadmin.OpcCategory);
+            Resourcesadmin.SelectDropdown(Resourcesadmin.DropSubCategory, Resourcesadmin.OpcSubCategory);
+            Resourcesadmin.BtnAddCategory.Click();
+            Resourcesadmin.BtnAddMore.Click();
 
         }
         [When(@"Choose the resource and fill the fields")]
@@ -60,17 +60,17 @@ namespace TestProject1.StepDefinitions
 
             if (Resourcetype == "Podcast")
             {
-                Resourcesadmin.btnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Podcast.mp3");
+                Resourcesadmin.BtnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Podcast.mp3");
                 Resourcesadmin.addImage.SendKeys(PathFiles + @"\Files\Resources\ImagePodcast.png");
             }
             else if (Resourcetype == "Document")
             {
-                Resourcesadmin.btnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Document.docx");
+                Resourcesadmin.BtnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Document.docx");
                 Resourcesadmin.addImage.SendKeys(PathFiles + @"\Files\Resources\ImageDocument.png");
             }
             else if (Resourcetype == "Video")
             {
-                Resourcesadmin.btnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Video.mp4");
+                Resourcesadmin.BtnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Video.mp4");
                 Resourcesadmin.addImage.SendKeys(PathFiles + @"\Files\Resources\ImageVideo.png");
             }
             else if (Resourcetype == "Webinar")
@@ -81,7 +81,7 @@ namespace TestProject1.StepDefinitions
             }
             else if (Resourcetype == "Data")
             {
-                Resourcesadmin.btnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Data.zip");
+                Resourcesadmin.BtnAddAttachment.SendKeys(PathFiles + @"\Files\Resources\Data.zip");
                 Resourcesadmin.addImage.SendKeys(PathFiles + @"\Files\Resources\ImageData.png");
             }
             Thread.Sleep(2000);
