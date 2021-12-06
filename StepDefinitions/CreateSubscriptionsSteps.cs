@@ -14,19 +14,21 @@ namespace TestProject1.StepDefinitions
         public void WhenSelectSubscriptionsComponent()
         {
             Createsubscriptionpage.SubscriptionComponent.Click();
-            Createsubscriptionpage.SubscriptionSubcomponent.Click();
+            
         }
 
         [When(@"Create a new Subscription")]
         public void WhenCreateANewSubscription()
         {
+            Createsubscriptionpage.SubscriptionSubcomponent.Click();
             Createsubscriptionpage.NewSubscriptionBtn.Click();
+            Createsubscriptionpage.TxtTitle.SendKeys(Createsubscriptionpage.SubsTitle);
         }
 
         [When(@"Fill all fields about Subscriptions")]
         public void WhenFillAllFieldsAboutSubscriptions()
         {
-            Createsubscriptionpage.TxtTitle.SendKeys(Createsubscriptionpage.SubsTitle);
+            
             Createsubscriptionpage.TxtName.SendKeys("Name");
             Createsubscriptionpage.TxtDescription.SendKeys("Description");
             //Createsubscriptionpage.EffectiveDateInput.SendKeys(DateTime.Now.ToString("yyyy-MM-dd"));

@@ -112,8 +112,8 @@ this.ScenarioInitialize(scenarioInfo);
                             "Email",
                             "Password"});
                 table4.AddRow(new string[] {
-                            "laura.moreno@pevaar.com",
-                            "Stephany091098"});
+                            "admin@admin.com",
+                            "Abc123*"});
 #line 8
  testRunner.When("Fill the fields", ((string)(null)), table4, "When ");
 #line hidden

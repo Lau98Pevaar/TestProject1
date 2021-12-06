@@ -7,6 +7,9 @@ namespace TestProject1.Pages.Register
 {
     public class Register4Comunication : DriverHelper
     {
+        public IWebElement LangDropdown1 => Driver.FindElement(By.XPath("//div[@class='selectize-input items not-full has-options']"));
+        public IWebElement LangDropdown2 => Driver.FindElement(By.XPath("//div[@class='selectize-input items not-full has-options focus input-active']"));
+        public IWebElement LangEN => Driver.FindElement(By.XPath("//div[@data-value='English']"));
         public IWebElement MoveUpdateSwitch => Driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div/div/div[2]/div/form/div[5]/div/div[2]/div/div[2]/label/span"));
 
        public IWebElement ButtonPolicyAndPrivacyLink => Driver.FindElement(By.Id("PrivacyPolicy"));

@@ -15,6 +15,7 @@ namespace TestProject1.Hooks
     public sealed class Hooks1 : DriverHelper
     {
         public String saveFile;
+        public String Loader;
         //private ITakesScreenshot webDriver;
 
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
@@ -26,7 +27,8 @@ namespace TestProject1.Hooks
             option.AddArguments("start-maximized");
             option.AddArguments("--disable-notifications");
             option.AddArgument("no-sandbox");
-            option.AddArgument("--disable-setuid-sandbox");
+            option.AddArguments("--lang=en");
+            //option.AddArgument("--disable-setuid-sandbox");
             option.AddArgument("--incognito");
             //option.AddArguments("--disable-gpu");
             //option.AddArguments("--headless");
@@ -40,7 +42,7 @@ namespace TestProject1.Hooks
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
             Directory.CreateDirectory("../../../Files"); //Crear carpeta (si no existe)
             saveFile = "../../../Files/"; //Ubicación para guardar los archivos
-            
+            Loader = "//div[@class='message' and contains(text(),Loading)]";
         }
 
         [AfterScenario]
@@ -52,7 +54,7 @@ namespace TestProject1.Hooks
             ss.SaveAsFile(saveFile +"Screen.png", ScreenshotImageFormat.Png);
             Thread.Sleep(5000);
 
-            //Driver.Quit();//TODO: implement logic that has to run after executing each scenario
+            Driver.Quit();//TODO: implement logic that has to run after executing each scenario
         }
     }
 }

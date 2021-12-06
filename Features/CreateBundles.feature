@@ -1,9 +1,20 @@
 ﻿Feature: CreateBundles
-	Simple calculator for adding two numbers
+	Create Bundles in LH
 
 @mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
+Scenario: Create Bundles
+	Given QA enviroment login
+	And  Find the text box to enter the Email, Password
+	When Fill the fields
+	|        Email                    | Password      |
+    |	mortohakku@vusra.com          |   Abc123      |
+	And  Move the remember me switch
+	And  Select Next button login
+	And Switch to admin
+	| UserType |
+	| Admin    |
+	And Select Subscriptions Component
+	And Create a new Bundle
+	And Fill all fields about Subscriptions
+	And Save and Publish the Subscription
+	Then Display the Bundle in the Bundles table

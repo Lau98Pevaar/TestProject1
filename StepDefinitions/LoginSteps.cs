@@ -94,12 +94,14 @@ namespace TestProject1.Feature
             if (Usertype == "Admin")
             {
                 Assert.That(loginPage.WelcomeToAdminPage.Displayed, Is.True, "Welcome to admin page did not displayed");
-                //Thread.Sleep(1000);
+                Thread.Sleep(1000);
             }
             else {
                 
                 Thread.Sleep(5000);
-                Assert.That(loginPage.dashboardLH.Displayed, Is.True,"Dashboard did not displayed");
+                //Assert.That(loginPage.dashboardLH.Displayed, Is.True,"Dashboard did not displayed");
+                //SelectOpOfDropdown(loginPage.LanguageDropdown, loginPage.LanguageOptionEN);
+                //Thread.Sleep(10000);
                 // Dashboard Header
                 Assert.That(loginPage.navEvents.Displayed, Is.True,"txtTitle Events did not displayed");
                 Assert.That(loginPage.navExplore.Displayed, Is.True,"txtTitle Explore did not displayed");
@@ -132,8 +134,10 @@ namespace TestProject1.Feature
                 Assert.That(loginPage.rTrending.Displayed, Is.True,"Section Trending Resources did not displayed");
                 Assert.That(loginPage.containerResources.Displayed, Is.True, "Container Resources did not displayed");
                 Assert.That(loginPage.containerTimeResources.Displayed, Is.True, "Container Time Resources did not displayed");
+                
 
             }
+
             
 
         }
