@@ -10,17 +10,19 @@ namespace TestProject1.Pages
     class CreateModulesPage : DriverHelper
     {
         //Begin
-        public IWebElement LearnComponent => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[2]/div[2]/div/div/ul/li[5]/a"));
-        public IWebElement ModulesSubcomponent => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[2]/div[2]/div/div/ul/li[5]/ul/li[3]/a"));
-        public IWebElement ModulesCard => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-modules/content-loader/div/div[2]/div"));
+        public IWebElement LearnComponent => Driver.FindElement(By.XPath("//a[@aria-controls='collapseBasic' and contains(text(),'Learn')]"));
+        public IWebElement ModulesSubcomponent => Driver.FindElement(By.XPath("//a[@class='sidebar-menu-button ng-star-inserted' and @href='/admin/learning-path/modules']"));
+        public IWebElement ModulesCard => Driver.FindElement(By.XPath("//div[@class='card-body']"));
         //New Module
-        public IWebElement CreateModuleBtn => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-modules/content-loader/div/div[1]/permission-block/button"));
+        public IWebElement CreateModuleBtn => Driver.FindElement(By.XPath("//button[@class='btn btn-primary ng-star-inserted']"));
         public IWebElement TxtTitle => Driver.FindElement(By.Id("editableTitle"));
-        public string ModuleTitle => "AT. Mod.";
-        public IWebElement TxtDescription => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[4]/div/synapze-cx-form-control/app-wysiwyg/div/ckeditor/div[2]/div[2]/div"));
+        public string ModuleTitle => "AT. Mod."+ Actualdate;
+        public IWebElement TxtDescription => Driver.FindElement(By.XPath("//div[@class='ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline ck-blurred']"));
         //public IWebElement DateEffectiveOnModule => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[5]/div[1]/synapze-cx-form-control/synapze-cx-calendar/form/p-calendar/span/input"));
-        public By DurationMonthsDropdown => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[5]/div[2]/div/div[1]/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]");
-        public By DurationMonthsOp1 => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[5]/div[2]/div/div[1]/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[1]/li");
+        public IWebElement EffectiveDateBtn => Driver.FindElement(By.XPath("//label[contains(text(),'EFFECTIVE ON')]//following-sibling::synapze-cx-form-control//button"));
+        public IWebElement EffectiveDateTodayBtn => Driver.FindElement(By.XPath("//span[@class='ui-button-text ui-clickable' and (contains(text(),'Hoy') or contains(text(),'Today'))]"));
+        public By DurationMonthsDropdown => By.XPath("//div[@class='ui-dropdown-trigger ui-state-default ui-corner-right ng-tns-c94-20']");
+        public By DurationMonthsOp1 => By.XPath("//li[@aria-label='1 month(s)']");
         public By DurationDaysDropdown => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[5]/div[2]/div/div[2]/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]");
         public By DurationDaysOp1 => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[5]/div[2]/div/div[2]/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[1]/li");
         public By CategoryDropdown => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[6]/div/div[1]/synapze-cx-form-control/tenant-category-selector/div/form/div/div/div/div[1]/tenant-category-selector-dropdown/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]");

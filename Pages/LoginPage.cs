@@ -57,6 +57,9 @@ namespace TestProject1.Pages
         public IWebElement Music => Driver.FindElement(By.XPath("/html/body/app-root/app-preferences/form/content-loader/div/div/div/div[6]/app-category-control/div/button"));
         public IWebElement ContinueBtn => Driver.FindElement(By.XPath("/html/body/app-root/app-preferences/form/div[2]/button"));
         public IWebElement GotIt => Driver.FindElement(By.XPath("/html/body/p-dynamicdialog/div/div/div[2]/app-confirmation-modal/div/button"));
+
+        public By LanguageDropdown => By.XPath("//p-dropdown[@formcontrolname='dropdownControl']//descendant::div[@role='button']");
+        public By LanguageOptionEN => By.XPath("//li[@aria-label='Inglés' or @aria-label='English' or @aria-label='Anglais']");
         //-----------------------------------------------------------------------------------------------------
 
         //public bool ElementExist(IWebElement e) => e.Displayed;

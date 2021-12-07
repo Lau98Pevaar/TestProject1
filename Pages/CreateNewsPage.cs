@@ -8,13 +8,13 @@ namespace TestProject1.Pages
     class CreateNewsPage : DriverHelper
     {
         public By Loader = By.XPath("//div[@class='message']");
-        public IWebElement NewsComponent => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[2]/div[2]/div/div/ul/li[7]/a"));
-        public IWebElement AddArticleBtn => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news/div[1]/permission-block/button"));
-        public IWebElement AddArticleFile => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news-edit/div/div/content-loader/div/edit-article/content-loader/div/form/div[1]/div/upload-media/div/label/input"));
-        public string NewsTitle = "AT. News";
+        public IWebElement NewsComponent => Driver.FindElement(By.XPath("//a[@href='/admin/news']"));
+        public IWebElement AddArticleBtn => Driver.FindElement(By.XPath("//button[@class='btn btn-primary ng-star-inserted']"));
+        public IWebElement AddArticleFile => Driver.FindElement(By.XPath("//upload-media//input[@type='file' ]"));
+        public string NewsTitle => "AT. News" + Actualdate;
         public IWebElement TxtTitle => Driver.FindElement(By.Id("editableTitle"));
-        public IWebElement TxtDescription => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news-edit/div/div/content-loader/div/edit-article/content-loader/div/form/div[3]/div/div/synapze-cx-form-control/synapze-cx-rich-text/form/p-editor/div/div[2]/div[1]"));
-        public IWebElement FileInput => Driver.FindElement(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news-edit/div/div/content-loader/div/edit-article/content-loader/div/form/div[1]/div/upload-media/div/label/input"));
+        public IWebElement TxtDescription => Driver.FindElement(By.XPath("//div[@class='ui-editor-content ql-container ql-snow']//descendant::div[@contenteditable='true' and @data-gramm]"));
+
         public By TopicDropdown => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news-edit/div/div/content-loader/div/edit-article/content-loader/div/form/div[4]/div/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[3]");
         public By TopicOption => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news-edit/div/div/content-loader/div/edit-article/content-loader/div/form/div[4]/div/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[3]/li");
         public By TopicOption2 => By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/synapze-cx-news-edit/div/div/content-loader/div/edit-article/content-loader/div/form/div[4]/div/synapze-cx-form-control/synapze-cx-simple-dropdown/form/p-dropdown/div/div[4]/div/ul/p-dropdownitem[3]/li/span");

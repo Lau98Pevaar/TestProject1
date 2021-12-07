@@ -106,6 +106,11 @@ namespace TestProject1.StepDefinitions
         {
             Thread.Sleep(2000);
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(60));
+
+            Register4comunication.LangDropdown1.Click();
+            Register4comunication.LangDropdown2.Click();
+            Register4comunication.LangEN.Click();
+
             Register4comunication.MoveUpdateSwitch.Click();            
             Register4comunication.ButtonPolicyAndPrivacyLink.Click();            
             Register4comunication.ClosePolicyAndPriv.Click();            

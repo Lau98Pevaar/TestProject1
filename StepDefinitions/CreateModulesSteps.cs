@@ -23,15 +23,15 @@ namespace TestProject1.StepDefinitions
         public void WhenSelectModulesAndCreateNew()
         {
             Createmodulespage.ModulesSubcomponent.Click();
-            //Thread.Sleep(5000);
+            Thread.Sleep(10000);
             Createmodulespage.CreateModuleBtn.Click();
         }
 
         [When(@"Fill all text boxes about this module")]
         public void WhenFillAllTextBoxesAboutThisModule()
         {
-            Createmodulespage.TxtTitle.SendKeys(Createmodulespage.ModuleTitle + Actualdate);
-            Createmodulespage.TxtDescription.SendKeys("txtDescription of module" + Actualdate);
+            Createmodulespage.TxtTitle.SendKeys(Createmodulespage.ModuleTitle);
+            Createmodulespage.TxtDescription.SendKeys("Description of module" + Actualdate);
             Thread.Sleep(8000);
              //WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(30));
             //wait.Until(ExpectedConditions.InvisibilityOfElementWithText(By.XPath("/html/body/app-root/app-admin-layout/div/section[1]/div/app-edit-module-view/content-loader/div/div/div/edit-module/content-loader/div/div/form/div[9]/synapze-cx-form-control/tenant-location-selector/content-loader/div/div/div[2]"),"Loading"));
@@ -106,7 +106,7 @@ namespace TestProject1.StepDefinitions
         [Then(@"Shows the module's table\.")]
         public void ThenShowsTheModuleSTable_()
         {
-            Assert.AreEqual(Createmodulespage.FirstElementTable.Text, Createmodulespage.ModuleTitle + Actualdate, "Strings are not matching");
+            Assert.AreEqual(Createmodulespage.FirstElementTable.Text, Createmodulespage.ModuleTitle, "Strings are not matching");
         }
     }
 }

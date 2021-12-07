@@ -30,7 +30,7 @@ namespace TestProject1.StepDefinitions
         [When(@"Fill all fields about News")]
         public void WhenFillAllFieldsAboutNews()
         {
-            Createnewspage.TxtTitle.SendKeys(Createnewspage.NewsTitle + Actualdate);
+            Createnewspage.TxtTitle.SendKeys(Createnewspage.NewsTitle);
             Createnewspage.TxtDescription.SendKeys("Descripción");
             Thread.Sleep(4000);
 
@@ -67,7 +67,7 @@ namespace TestProject1.StepDefinitions
         [Then(@"Display the article in the news table")]
         public void ThenDisplayTheArticleInTheNewsTable()
         {
-            Assert.AreEqual(Createnewspage.FirstElementTable.Text, Createnewspage.NewsTitle + Actualdate, "Strings are not matching");
+            Assert.AreEqual(Createnewspage.FirstElementTable.Text, Createnewspage.NewsTitle, "Strings are not matching");
         }
     }
 }
